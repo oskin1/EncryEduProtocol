@@ -141,7 +141,10 @@
         "id" : "3TFb24rb2v1pKDTVQig3ZGANGuCHXrLBGyy5c9rDLzzR",
         # Ссылка на актив с оплатой от студента и пруф, необходимый для его "анлока", мульти-подпись, в данном случае.
         "unlockers" : [{"boxId" : "5nT6VN6DdWBhVByFKxt2HyJ43LNc7uepHvRXGanWp6q",
-                        "proof" : "None"}],
+                        "proof" : {"proofs" : [{"typeId" : 1, 
+                                   "signature" : "5EaoVcbeXoKbUN2bx8Nr1CLsYo7qhtZ6MdkUHeC9YE92rkUL8dsohZjLryiWiiiGiKtSXvqwvrxw1HaBhGkcE21H"},
+                                   {"typeId" : 1, 
+                                   "signature" : "Pb8Utj8EwJGe2fG24tQLPSRiR9JoNB35LsYo8qhtZ6MdkUHeC9YE12rkUL2dsohZjLryiWiiiGiKtSXvqwvrxw1"}]}}],
         "fee" : 993
     }
 
