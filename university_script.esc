@@ -1,0 +1,14 @@
+
+let universityPk = base58'${}'
+let minobrPk = base58'${}'
+
+def validMultiSig(proof: Proof) -> Bool:
+    match proof:
+        case mulSig -> MultiSig:
+            let sig1 = 1 if mulSig.proofs[0].isDefined && checkSig(mulSig.proofs[0].get.sigBytes, context.transaction.messageToSign, minobrPk) else 0
+            let sig2 = 1 if mulSig.proofs[1].isDefined && checkSig(mulSig.proofs[1].get.sigBytes, context.transaction.messageToSign, universityPk) else 0
+            return (sig1 + sig2) == 2
+        case _:
+            return false
+
+unlock if validMultiSig(context.proof)
