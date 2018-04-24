@@ -103,17 +103,17 @@
 
 Отправка транзакции для выпуска токенов (см пункт "Публикация образовательной программы")
 
-    [http://node_ip:8051/transactions/send]
+    [http://node_ip:9051/transactions/send]
 
     {
         "directives" : [{"scriptFingerprint" : "24N3HJx3q3D",          # Директива на создание нового типа актива
                          "typeId" : 5, 
                          "amount" : 100, 
                          "idx" : 0,
-                         "script" : "11CmyAEN8DEHyDCvoxMUyE72eBWjkXGxxNhRCYSbk3c24m4FALZtHCiM2mcHjyQgvnF9kSTkJDyETvmkqiD5CW3M1",
-                         "complexityScore" : 930}],
+                         "script" : "18ptqohPAQK7SifBMmgmxPuivWCtEaQm3n7RbKjuyFGrTxJaepWjmX5c3NqSgVQ6a3bY9BdGbcmzroNAF5NEv1zHSWY6bEizFsgjiqc7FcbGwwgFt9mKZXXj3sPZ2ejLwbqZj24WLvvTNLshesJsnCK7vYWygkjw2QfM3eCvQis1eisBmcT9YsTyn7W2mEdbyqZq2nLDAv4rVgQN5smgupN5gfYBqoqpgHtwUP3kTZqMo7Qx1zNotiuh7QnR5FTET8KNawRjxbKr2YzXEsYjEcxEWxoPYLwMr5c5a7QKxScjdbxBZv9hpAD3ZAoweTCx9ix4URY9Ln9pvCTXduabZUz2PeLaFJe8NvNJX3AzYDRZUDZ1bU4owC65A1FENF766Lei3zdBWTsZy6PQChjJ4eBtPDKChavgxE41yHDnaT7zPTBRi1Jw53a98M1DphLBxENdtfajmRZjVqqgJCfQ9fZUogoPCem6411CmyAEN8DEHyDCvoxMUyE72eBWjkXGxxNhRCYSbk3c24m4FALZtHCiM2mcHjyQgvnF9kSTkJDyETvmkqiD5CW3M1",
+                         "complexityScore" : 530}],
         "timestamp" : 1524400313742,
-        "signature" : "hS5BnLbsA8T78gF574onfiU5dKnrjzAWFLsPTYtyaQCND4eMDmLTeuYQ5QPhcCNykdzRzMGscKWATJ1oTpW731fZrfhsu18ptqohPAQK7SifBMmgmxPuivWCtEaQm3n7RbKjuyFGrTxJaepWjmX5c3NqSgVQ6a3bY9BdGbcmzroNAF5NEv1zHSWY6bEizFsgjiqc7FcbGwwgFt9mKZXXj3sPZ2ejLwbqZj24WLvvTNLshesJsnCK7vYWygkjw2QfM3eCvQis1eisBmcT9YsTyn7W2mEdbyqZq2nLDAv4rVgQN5smgupN5gfYBqoqpgHtwUP3kTZqMo7Qx1zNotiuh7QnR5FTET8KNawRjxbKr2YzXEsYjEcxEWxoPYLwMr5c5a7QKxScjdbxBZv9hpAD3ZAoweTCx9ix4URY9Ln9pvCTXduabZUz2PeLaFJe8NvNJX3AzYDRZUDZ1bU4owC65A1FENF766Lei3zdBWTsZy6PQChjJ4eBtPDKChavgxE41yHDnaT7zPTBRi1Jw53a98M1DphLBxENdtfajmRZjVqqgJCfQ9fZUogoPCem64",
+        "signature" : "hS5BnLbsA8T78gF574onfiU5dKnrjzAWFLsPTYtyaQCND4eMDmLTeuYQ5QPhcCNykdzRzMGscKWATJ1oTpW731fZrfhsu",
         "accountPubKey" : "4BYUDMQ6P65Wh28o57u5JLmwygHCgF9fuaMi7inzdDus",
         "id" : "3TFb24rb2v1pKDTVQig3ZGANGuCHXrLBGyy5c9rDLzzR",
         "unlockers" : [{"boxId" : "5nT6VN6DdWBhVByFKxt2HyJ43LNc7uepHvRXGanWp6q",
@@ -125,16 +125,17 @@
 Транзакция для получения оплаты от студента и выдачи свидетельства об образовании
 (см пункт "Выдача свидетельства о прохождениии студентом образовательной программы (aka диплома)")
 
-    [http://node_ip:8051/transactions/send]
+    [http://node_ip:9051/transactions/send]
 
     {
-        # Директива на создание нового типа актива
-        "directives" : [{"scriptFingerprint" : "24N3HJx3q3D",   # Первые 8 байт blake2b256Hash от сериализованного скрипта.
-                         "typeId" : 5, 
-                         "amount" : 100, 
-                         "idx" : 0,
-                         "script" : "111FxZHdod3vwkisK2PwNsgKPLUGurGkPZcGXAKz8RyMXBqXzW3ewh1FrZxzQKBV9FMoyGGYuxYWfVevud2CNQXGgLsk4ZdBDTB8SKFt4qQmWvtnZcxDjF3cL3TXfSU8XFb9f6pF7j74NRJ4cuMvok7pREBbMadzCMBmxcXLojLFyLiXyGsyDuuLQSYuz83JsMxPLJKvi58iXQ4Mo13VDUv4yR5dDp8TeAgCrCKMi439FYQwqfngrELHZyGXG8SdWNdbXq4AJW5MNJnRz4NHoZH2D76wyKbWN34muyaeGuTuMQdqjc2cbyU7YFHTAWvNBdHKseSWQMBCq1kLR6dmRsmLgrBfTJE2yX7ypJxMN41yxbUn6g5pimVePX6SkC8m7f2Ze4scM1Uv6bSpTpof6RZZ7hsoU69yaqjeREWGBvW9pUnfjVUxHiadH3qF6N1Q2hATyrjEuXiU1s7meBy4dTqDzPb8Utj8EwJGe2fG24tQLPSRiR9JoNB35fZG716XYpkdPfw53hFXLTxDbZJwUChJrppmRxhKv1xXkn5ovvGhTdAMrKhfsFEmvzEXj2TviHucGTGHzS8ZFdRZrTzGc68M38TZZBqkcwYCyYZHHnY7DFCTukUBn6YwtYtdde4ZQp7DZCbA8rsVzFXF4z1curNURQjV1FoKw5oGXuQsHbFLKPshSL4RDpPRcWDZakainNLuzNe5DnnUcmRhaZFQQtXCcskADanAtAVxusw8sYKFmy251DCKUUVqBNrTwY3drRvyBEPYAH5ovN1wbbxVMKAdd4GhgDomUDwaZkM8NBeNPURrTaxZ4EtS2sutjYW5TY4rBQGh9XbqnmLhDLKGyyRsm3tvyZPem2XTVkKshKbs7wMEKc9T141pfXsVQCPDY2trxsBd7s7XbEBgXBaRkaTdx7PXvhzSuV1QrqoiPnNA1h9XcVy8BTi4ypzyjVpFy1vVFasvswiUdoL2RqrHMdREF9AadPedujk9kgSRAFLM6aZsvgSoC2BV9b9gcgQJ2MV5PbxWxA2ZeRvwJ6fxJPQpXWKJzTKtKcFsWByBZ4hgnhr12pNu7yxkV1YUdk1ZiufjVq4qfKmjG6EiimTtmScFonDPBhq4zXWDzTDimVkKhRVD22j6tYTa2MWtNEvByrmxFmUGTHYukVGcdCTNFvKteQqP7ez1awFAW",
-                         "complexityScore" : 930}],
+        # Директива на трансфер свидетельства студенту
+        # TODO: Use ScriptedAssetDirective here.
+        "directives" : [{"typeId" : 1,
+                         "amount" : 75,
+                         "tokenId" : "aepWjmX5c3NqSgVQ6a3bY9BdGbcmzroNAF5NEv1zHSWY6MS9SB",
+                         "verboseType" : "TRANSFER",
+                         "address" : "2xRvPN5CvDoHmnYtPTsccAtuAUMS9SBmMJ5RUn435EstH3PW18",
+                         "idx" : 0}],
         "timestamp" : 1524400313742,
         "signature" : "hS5BnLbsA8T78gF574onfiU5dKnrjzAWFLsPTYtyaQCND4eMDmLTeuYQ5QPhcCNykdzRzMGscKWATJ1oTpW731f",
         "accountPubKey" : "4BYUDMQ6P65Wh28o57u5JLmwygHCgF9fuaMi7inzdDus",
@@ -142,10 +143,10 @@
         # Ссылка на актив с оплатой от студента и пруф, необходимый для его "анлока", мульти-подпись, в данном случае.
         "unlockers" : [{"boxId" : "5nT6VN6DdWBhVByFKxt2HyJ43LNc7uepHvRXGanWp6q",
                         "proof" : {"proofs" : [{"typeId" : 1, 
-                                   "signature" : "5EaoVcbeXoKbUN2bx8Nr1CLsYo7qhtZ6MdkUHeC9YE92rkUL8dsohZjLryiWiiiGiKtSXvqwvrxw1HaBhGkcE21H"},
-                                   {"typeId" : 1, 
-                                   "signature" : "Pb8Utj8EwJGe2fG24tQLPSRiR9JoNB35LsYo8qhtZ6MdkUHeC9YE12rkUL2dsohZjLryiWiiiGiKtSXvqwvrxw1"}]}}],
-        "fee" : 993
+                                                "signature" : "5EaoVcbeXoKbUN2bx8Nr1CLsYo7qhtZ6MdkUHeC9YE92rkUL8dsohZjLryiWiiiGiKtSXvqwvrxw1HaBhGkcE21H"},
+                                                {"typeId" : 1, 
+                                                 "signature" : "Pb8Utj8EwJGe2fG24tQLPSRiR9JoNB35LsYo8qhtZ6MdkUHeC9YE12rkUL2dsohZjLryiWiiiGiKtSXvqwvrxw1"}]}}],
+        "fee" : 820
     }
 
 
@@ -161,10 +162,10 @@
 2. ScalaSDK
 3. SBT
 
-    $ git clone https://github.com/EncryFoundation/EncryCore.git
+    `$ git clone https://github.com/EncryFoundation/EncryCore.git`
 
-    $ cd EncryCore
+    `$ cd EncryCore`
 
-    $ /bin/bash ./startup.sh
+    `$ /bin/bash ./startup.sh`
 
 API ноды доступны на по адресу `http://127.0.0.1:9051`
